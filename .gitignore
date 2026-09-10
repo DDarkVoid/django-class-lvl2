@@ -1,75 +1,62 @@
-*.log
-
+# Python
+__pycache__/
 *.py[codt]
-
-# C extensions
 *.so
-
-# Packages
 *.egg
-*.egg-info
-dist
-build
-eggs
-parts
-bin
-var
-sdist
-develop-eggs
+*.egg-info/
+dist/
+build/
+eggs/
+sdist/
+develop-eggs/
 .installed.cfg
-lib
-lib64
 
-# Installer logs
-pip-log.txt
+# Virtualenv
+.venv/
+venv/
+env/
+env*/
 
-# Unit test / coverage reports
-.coverage
-.tox
-nosetests.xml
-
-# Translations
-*.mo
-
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
-
-# Complexity
-output/*.html
-output/*/index.html
-
-# Sphinx
-docs/_build
-
-.webassets-cache
-
-# Virtualenvs
-env
-env*
-venv
-
-# intellij
+# IDE
+.idea/
 *.ipr
 *.iml
 *.iws
+.vscode/
 
-django-class-lvl2/settings/local.py
-django-class-lvl2/settings/production.py
+# Env & secrets
+.env
 
-# collect static output directory
-django-class-lvl2/assets/
-django-class-lvl2/static/
+# Django local/production settings
+config/settings/local.py
+config/settings/production.py
 
+# Django static/media
+config/assets/
+config/static/
+staticfiles/
+media/
+
+# Logs
+*.log
+pip-log.txt
+
+# Tests & coverage
+.coverage
+.tox/
+nosetests.xml
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# OS
 .DS_Store
+Thumbs.db
 
-# node
+# Node
 node_modules/
 
-# bower packages
-django-class-lvl2/assets-src/vendor/
-.sass-cache/
-
-# db
+# DB
 *.db
+*.sqlite3
