@@ -3,7 +3,6 @@
 # to each package in each requirements/*.txt.
 
 django
-
-django-model-utils
-
-psycopg2
+djangorestframework
+psycopg2-binary
+python-dotenv
