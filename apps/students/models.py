@@ -1,6 +1,7 @@
 """Models for students app."""
 
 from django.db import models
+from rest_framework.authtoken.models import Token
 
 GROUP_NAME_MAX_LENGTH = 100
 STUDENT_NAME_MAX_LENGTH = 200
@@ -42,3 +43,21 @@ class Student(models.Model):
     def __str__(self) -> str:
         """Return student full name."""
         return self.full_name
+
+
+class TokenUsage(models.Model):
+    """Request counter associated with an API token."""
+
+    token = models.OneToOneField(
+        Token,
+        on_delete=models.CASCADE,
+        related_name='usage',
+    )
+    request_count = models.PositiveIntegerField(default=0)
+
+    def __str__(self) -> str:
+        """Return string representation."""
+        return 'Token {0}: {1}'.format(
+            self.token.key[:8],
+            self.request_count,
+        )
