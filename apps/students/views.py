@@ -1,8 +1,9 @@
 """Views for students app."""
 
+from rest_framework import viewsets
+
 from apps.students.models import Group, Student
 from apps.students.serializers import GroupSerializer, StudentSerializer
-from rest_framework import viewsets
 
 
 class GroupViewSet(viewsets.ModelViewSet):

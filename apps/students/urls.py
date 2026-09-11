@@ -1,7 +1,8 @@
 """URLs for students app."""
 
-from apps.students.views import GroupViewSet, StudentViewSet
 from rest_framework.routers import DefaultRouter
+
+from apps.students.views import GroupViewSet, StudentViewSet
 
 router = DefaultRouter()
 router.register('groups', GroupViewSet)

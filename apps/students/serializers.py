@@ -1,7 +1,8 @@
 """Serializers for students app."""
 
-from apps.students.models import Group, Student
 from rest_framework import serializers
+
+from apps.students.models import Group, Student
 
 
 class StudentSerializer(serializers.ModelSerializer):
